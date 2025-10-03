@@ -24,6 +24,10 @@ apt install -y python3 python3-pip python3-venv git
 # Crea directory app
 echo "📁 Creazione directory ${APP_DIR}..."
 mkdir -p ${APP_DIR}
+
+# dai i permessi a lg58 PRIMA di clonare
+chown ${SERVICE_USER}:${SERVICE_USER} ${APP_DIR}
+
 cd ${APP_DIR}
 
 # Clona repository
